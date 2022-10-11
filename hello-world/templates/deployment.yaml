@@ -23,9 +23,6 @@ spec:
       containers:
         - name: {{ .Chart.Name }}
           image: "{{ .Values.image.repository }}:{{ .Values.image.tag }}"
-          args:
-          - sleep
-          - "300"
           imagePullPolicy: {{ .Values.image.pullPolicy }}
           ports:
             - name: http
